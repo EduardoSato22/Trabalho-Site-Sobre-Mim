@@ -1,0 +1,12 @@
+:root {
+    /*Cores */
+    --cor-principal: white;
+    --cor-secundaria: blue;
+    --cor-terciaria: green;
+    --cor-txt-principal: black;
+    --cor-txt-secundaria: rgb(255, 0, 0);
+    /* Espaçamentos*/
+    --espacamento-pequeno: 5px;
+    --espacamento-regular: 7px;
+    --espacamento-grande: 12px;
+}
