@@ -1,10 +1,10 @@
 :root {
     /*Cores */
-    --cor-principal: white;
-    --cor-secundaria: blue;
-    --cor-terciaria: green;
-    --cor-txt-principal: black;
-    --cor-txt-secundaria: rgb(255, 0, 0);
+    --cor-principal: rgb(59, 84, 168);
+    --cor-secundaria: rgb(255, 255, 255);
+    --cor-terciaria: rgb(0, 204, 255);
+    --cor-txt-principal: rgb(0, 0, 0);
+    --cor-txt-secundaria: rgb(255, 255, 255);
     /* Espaçamentos*/
     --espacamento-pequeno: 5px;
     --espacamento-regular: 7px;

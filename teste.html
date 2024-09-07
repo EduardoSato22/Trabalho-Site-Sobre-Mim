@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Botão e Pop-up</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="button-container">
+        <button class="button-link" onclick="openModal()">Enviar</button>
+    </div>
+
+    <!-- Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Enviado com sucesso!</p>
+            <button class="button-link" onclick="redirectToHome()">Voltar à Página Principal</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('successModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('successModal').style.display = 'none';
+        }
+
+        function redirectToHome() {
+            window.location.href = 'index.html'; // Substitua pelo URL da sua página principal
+        }
+
+        // Fechar o modal ao clicar fora da caixa de conteúdo
+        window.onclick = function(event) {
+            if (event.target === document.getElementById('successModal')) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

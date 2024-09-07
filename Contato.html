@@ -27,23 +27,55 @@
             <ul>
                 <li><a href="MeuSite.html"> Principal</a></li>
                 <li><a href="Contato.html"> Contato</a></li>
-                <li><a href="#"> Musicas</a></li>
+                <li><a href="Musicas.html"> Musicas</a></li>
             </ul>
         </nav>
     </header>
-    <!--FORMULARIO CONTATO-->
     <section class="formulario">
         <div>
             <h2>Fale Comigo</h2>
             <h3>Prencha os dados</h3>
         </div>
         <form>
-            <input type="text" name="Nome" placeholder="Nome Completo">
+            <input type="text" name="nome" placeholder="Nome Completo">
             <input type="text" name="email" placeholder="Seu Email">
             <input type="tel" name="telefone" placeholder="Numero de Telefone">
-            <button><u>Enviar</u></button>
+            <label for="mensagem">Sua Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Digite aqui sua mensagem"></textarea>
+            </div>
         </form>
     </section>
+    <div class="button-container">
+        <button class="button-link" onclick="openModal()">Enviar</button>
+    </div>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Enviado com sucesso!</p>
+            <button class="button-link" onclick="redirectToHome()">Voltar à Página Principal</button>
+        </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('successModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('successModal').style.display = 'none';
+        }
+
+        function redirectToHome() {
+            window.location.href = 'MeuSite.html'; 
+        }
+
+        window.onclick = function(event) {
+            if (event.target === document.getElementById('successModal')) {
+                closeModal();
+            }
+        }
+    </script>
+
     <footer>
         <p>&copy; 2023 - Todos os direitos reservados</p>
         <nav>

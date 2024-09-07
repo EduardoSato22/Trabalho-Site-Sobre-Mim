@@ -3,35 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principal</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="variable.css">  
+    <title>Início</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="variable.css">  
     <link rel="shortcut icon" href="IMG/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Teachers:wght@400;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="cabecalho">
-        <a href="MeuSite.html"></a>
-        <img src="IMG/e-book.png">
+        <a href="MeuSite.html">
+            <img src="IMG/e-book.png" alt="Logo">
+        </a>
         <button class="btn-menu">
             <i class="fa fa-bars fa-lg"></i>
         </button>
-
         <nav class="menu">
-            <a class="btn-close">
+            <button class="btn-close">
                 <i class="fa fa-times"></i>
-            </a>
+            </button>
             <ul>
-                <li><a href="MeuSite.html"> Principal</a></li>
-                <li><a href="Contato.html"> Contato</a></li>
-                <li><a href="#"> Musicas</a></li>
+                <li><a href="MeuSite.html">Principal</a></li>
+                <li><a href="Contato.html">Contato</a></li>
+                <li><a href="Musicas.html">Músicas</a></li>
             </ul>
         </nav>
     </header>
+                                    
+    <main>
+        <section class="titulos">
+            <h1>Sobre mim</h1>
+        </section>
+        <section class="interesses">
+            <p>Me chamo Eduardo Sato, e desde pequeno sempre apreciei a tecnologia. Foi por isso que decidi cursar Análise e Desenvolvimento de Sistemas na Unilavras. Escolhi a tecnologia para ser meu futuro.</p>
+            <div class="image-container">
+                <img src="IMG/AniversarioPai.jpeg" alt="Imagem Minha">
+            </div>
+        </section>
+        <section class="titulos">
+            <h2>Atividades Profissionais</h2>
+        </section>
+        <section class="interesses">
+            <p>Trabelhei durante um bom tempo na area de almoxarifado, porem e um trabalho muito desgastante e pesado, que demandava muito das minhas energias. Por isso resolvi entrar na Unilavras, para conquistar um trabalho voltado para o que sempre gostei, a tecnologia. Atualmente estou trabalhando como Help Desk T.I., iniciado minha carreira na area de tecnologia.</p>
+            <div class="image-container">
+                <img src="IMG/japan-background-digital-art.jpg" alt="Imagem relacionada ao meu interesse">
+            </div>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2023 - Todos os direitos reservados</p>
         <nav>
@@ -43,5 +63,18 @@
             </ul>
         </nav>
     </footer>
+    
+    <!-- JQUERY - Adiciona efeitos -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".btn-menu").click(function() {
+            $(".menu").show();
+        });
+        $(".btn-close").click(function() {
+            $(".menu").hide();
+        });
+    });
+    </script>
 </body>
 </html>
