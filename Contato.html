@@ -56,7 +56,16 @@
             <button class="button-link" onclick="redirectToHome()">Voltar à Página Principal</button>
         </div>
 
-    <script>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $(".btn-menu").click(function() {
+                $(".menu").show();
+            });
+            $(".btn-close").click(function() {
+                $(".menu").hide();
+            });
+        });
         function openModal() {
             document.getElementById('successModal').style.display = 'block';
         }
